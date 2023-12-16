@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        form {
+            background-color: rgba(104, 99, 99, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 90%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        input[type="number"] {
+            width: auto; /* Remove the fixed width for number input */
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #666;
+        }input[type="password"], input[type="email"] {
+    -webkit-text-security: none; /* Disable password masking in WebKit browsers */
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin: 5px 0;
+}
+
+        .return-link {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .return-link:hover {
+            background-color: #666;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <form action="adduser.php" method="post">
+                nom:<input type="text" name="nom" placeholder="">
+                <br><br>
+                prenom: <input type="text" name="prenom">
+                <br><br>
+                email: <input type="email" name="email" >
+                <br><br>
+                pwd: <input type="password" name="pwd">
+                <br><br>
+                telephone: <input type="number" name="tele">
+                <br><br>
+                role: <select name="role" id="">
+                    <option value="admin">admin</option>
+                    <option value="user">user</option>
+                </select>
+                <input type="submit" value="Submit"> <input type="reset" value="Reset">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

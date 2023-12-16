@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Fields and Number Selector</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        form {
+            background-color: rgba(104, 99, 99, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        input[type="number"] {
+            width: auto; /* Remove the fixed width for number input */
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #666;
+        }
+
+        .return-link {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .return-link:hover {
+            background-color: #666;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <form action="add.php" method="post">
+                Code: <input type="text" name="c" placeholder="example: #0154">
+                <br><br>
+                Name: <input type="text" name="n" placeholder="example: meat">
+                <br><br>
+                Location: <input type="text" name="loc" placeholder="where to store">
+                <br><br>
+                Select the quantity: <input type="number" name="q">
+                <br><br>
+                <input type="submit" value="Submit"> <input type="reset" value="Reset">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
